@@ -14,17 +14,17 @@ crawlergo-to-xray，可以把0Kee-Team crawlergo爬虫爬取的链接推送给�
 
 **二、依次启动webhook、xray、crawlergo**
 
-（1）启动webhook并查看日志（需要自行修改代码中的配置）
+（一）启动webhook并查看日志（需要自行修改代码中的配置）
 
 1. nohup python3 webhook.py > webhook.log 2>&1 &
 2. tail -f webhook.log
 
-（2）启动xray并查看日志（需要自行修改xray的配置文件以及命令行中的的配置，建议在xray里面配置username和password）
+（二）启动xray并查看日志（需要自行修改xray的配置文件以及命令行中的的配置，建议在xray里面配置username和password）
 
 1. nohup ./xray_linux_amd64  webscan  --listen 0.0.0.0:[xray_port]   --webhook-output http://127.0.0.1:[webhook_port]/webhook   --html-output  xray.html   >   xray.log    2>&1 &
 2. tail -f  xray.log
 
-（3）启动crawlergo并查看日志（需要自行修改代码中的配置）
+（三）启动crawlergo并查看日志（需要自行修改代码中的配置）
 
 1.  nohup python3 crawlergo.py  >   crawlergo.log 2>&1 &
 2.  tail -f crawlergo.log
