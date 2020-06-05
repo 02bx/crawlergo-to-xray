@@ -1,3 +1,9 @@
+**简介：**
+
+crawlergo-to-xray，可以把0Kee-Team crawlergo爬虫爬取的链接推送给长亭xray分析，xray分析后自动调用webhook接口利用server酱实时推送漏洞预警到微信，让你躺着挖漏洞。**支持多线程。**
+
+
+
 **操作步骤（以ubuntu 64位操作系统为例）**
 
 **一、运行xray可执行文件生成如下文件并配置**
